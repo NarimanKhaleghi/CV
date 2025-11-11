@@ -18,7 +18,8 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- در بخش head فایل HTML -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Font Awesome CDN for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -54,6 +55,29 @@
             background-color: var(--bg-color-light);
             color: var(--text-color-light);
             transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        li {
+          direction: rtl;
+          text-align: justify;
+          text-justify: inter-word;
+          line-height: 1.5;
+        }
+        p {
+          direction: rtl;
+          text-align: justify;
+          text-justify: inter-word;
+          line-height: 1.5;
+        }
+
+        img {
+          filter: grayscale(100%);
+          transition: filter 0.4s ease; /* برای افکت نرم هنگام هاور */
+        }
+
+        /* وقتی موس روی تصویر می‌ره، رنگ اصلی برمی‌گرده */
+        img:hover {
+          filter: grayscale(0%);
         }
 
         body.dark {
@@ -253,7 +277,7 @@
             #navbar {
                 margin: 0px;
                 padding: 0px;
-                right: 1px;
+                right: 0px;
             }
             #navbar span {
                 display: none; /* Ensure text is hidden on desktop for thin nav */
@@ -267,14 +291,14 @@
             #navbar-left {
                 margin: 0px;
                 padding: 0px;
-                left: 1px;
+                left: 0px;
             }
             #navbar-left span {
                 display: none; /* Ensure text is hidden on desktop for thin nav */
             }
             #main-content {
-                padding-right: 2.3rem;
-                padding-left: 0.1rem; /* Reset padding for mobile */
+                padding-right: 2.85rem;
+                padding-left: 2.5rem; /* Reset padding for mobile */
                 padding-bottom: 0px;
             }
             #header .flex-row-reverse {
@@ -325,7 +349,6 @@
                 display: none; /* Ensure text is hidden on desktop for thin nav */
             }
             #main-content {
-                padding-right: 100px;
                 padding-bottom: 0px; /* Add padding to main content to prevent overlap */
             }
         }
@@ -333,19 +356,20 @@
 </head>
 <!--<body class="text-gray-900 dark:text-gray-100 transition-colors duration-300"></body>-->
 <body>
+    <div id="particles-js" class="fixed top-0 left-0 w-full h-full z-0"></div>
     <div id="cursor-effect">
         <div class="cursor-circle" id="circle1"></div>
         <div class="cursor-circle" id="circle2"></div>
         <div class="cursor-circle" id="circle3"></div>
     </div>
     <!-- Welcome Pop-up -->
-    <div id="welcome-popup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] fade-in">
-        <div class="glassmorphism p-1 rounded-2xl shadow-lg max-w-md w-full text-center scale-in">
+    <div id="welcome-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100] fade-in">
+        <div class="glassmorphism p-4 rounded-2xl shadow-lg max-w-md w-full text-center scale-in">
             <h2 class="text-2xl font-bold mb-6" data-lang-fa="خوش آمدید!" data-lang-en="Welcome!">خوش آمدید!</h2>
 
             <div class="mb-6 flex items-center justify-center">
                 <span class="text-lg font-medium mr-0" data-lang-fa="زبان:" data-lang-en="Language:">زبان:</span>
-                <div class="flex items-center glassmorphism p-1 rounded-full">
+                <div class="flex items-center glassmorphism p-4 rounded-full">
                     <button id="lang-fa-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-lang="fa">
                         <i class="fas fa-globe"></i> فارسی
                     </button>
@@ -357,12 +381,12 @@
 
             <div class="mb-8 flex items-center justify-center">
                 <span class="text-lg font-medium mr-0" data-lang-fa="تم:" data-lang-en="Theme:">تم:</span>
-                <div class="flex items-center glassmorphism p-1 rounded-full">
+                <div class="flex items-center glassmorphism p-4 rounded-full">
                     <button id="theme-light-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-theme="light">
-                        <i class="fas fa-sun"></i> لایت
+                        <i class="fas font-medium fa-sun" data-lang-fa=" لایت" data-lang-en=" Light"></i>
                     </button>
                     <button id="theme-dark-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-theme="dark">
-                        <i class="fas fa-moon"></i> دارک
+                        <i class="fas font-medium fa-moon" data-lang-fa=" دارک" data-lang-en=" Dark"></i>
                     </button>
                 </div>
             </div>
@@ -372,7 +396,7 @@
     </div>
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-40 glassmorphism p-1 flex items-center justify-between h-16 transition-all duration-300">
+    <header id="header" class="fixed top-3 left-3 right-3 z-40 glassmorphism p-1 flex items-center justify-between h-16 transition-all duration-300">
         <!-- Language Switch (Left) -->
         <div class="flex items-center">
             <button id="header-lang-switch" class="p-1 rounded-full hover-bw transition-all duration-300 text-xl">
@@ -394,7 +418,7 @@
     <!-- Main Content -->
     <main id="main-content" class="container mx-auto px-4 py-10 min-h-screen relative">
         <!-- Navigation Bar (Right, fixed) -->
-        <nav id="navbar" class="fixed right-4 top-1/2 transform -translate-y-1/2 z-30 glassmorphism p-1 rounded-full flex flex-col items-center space-y-1 transition-all duration-300">
+        <nav id="navbar" class="fixed top-1/2 transform -translate-y-1/2 z-30 glassmorphism p-1 rounded-full flex flex-col items-center space-y-1 transition-all duration-300">
             <a href="#profile" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="profile">
                 <i class="fas fa-user text-xl"></i>
                 <span class="ml-0 hidden md:inline" data-lang-fa="پروفایل" data-lang-en="Profile">پروفایل</span>
@@ -439,12 +463,12 @@
             <a href="https://wa.me/989123456789" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-whatsapp text-xl"></i></a>
             <a href="https://x.com/yourusername" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-twitter text-xl"></i></a>-->
         </nav>
-        
+
         <!-- <section id="profile" class="mb-1 py-10 fade-in" style="animation-delay: 0.2s;"> -->
         <section id="profile" class="mb-1 py-20 fade-in" style="animation-delay: 0.2s;">
             <h2 class="text-6xl font-extrabold text-center mb-12" data-lang-fa="درباره من" data-lang-en="About Me">درباره من</h2>
             <div class="glassmorphism p-1 rounded-2xl max-w-2xl mx-auto text-center hover-border-bw hover-grow">
-                <img src="./image/Nariman-Khaleghi-نریمان-خالقی.jpg" alt="Nariman Khaleghi Profile" class="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-black dark:border-white shadow-lg">
+                <img src="./images/Nariman-Khaleghi-نریمان-خالقی.jpg" alt="Nariman Khaleghi Profile" class="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-black dark:border-white shadow-lg">
                 <h3 class="text-3xl font-bold mb-4" data-lang-fa="نریمان خالقی" data-lang-en="Nariman Khaleghi">نریمان خالقی</h3>
                 <p class="text-lg mb-6" data-lang-fa="توسعه دهنده وب با تجربه در ساخت راه حل‌های مقیاس‌پذیر و کاربرپسند." data-lang-en="Experienced web developer passionate about building scalable and user-friendly solutions.">توسعه دهنده وب با تجربه در ساخت راه حل‌های مقیاس‌پذیر و کاربرپسند.</p>
 <!--                 <div class="flex justify-center space-x-6 rtl:space-x-reverse text-1xl">
@@ -472,6 +496,25 @@
                     <div class="md:w-5/12 glassmorphism p-1 rounded-2xl hover-border-bw hover-grow cursor-pointer" onclick="openModal('experience-1-modal')">
                         <div class="flex items-center mb-4">
                             <img src="./assets/image/Nariman-Khaleghi-نریمان-خالقی.jpg" alt="Company Logo" class="w-12 h-12 rounded-full mr-1 ml-1">
+                            <div>
+                                <h3 class="text-xl font-semibold" data-lang-fa="توسعه دهنده ارشد وب" data-lang-en="Senior Web Developer">توسعه دهنده ارشد وب</h3>
+                                <p class="text-gray-600 dark:text-gray-400" data-lang-fa="شرکت الف" data-lang-en="Company A">شرکت الف</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="فروردین ۱۴۰۰ - اسفند ۱۴۰۲" data-lang-en="April 2021 - March 2024">فروردین ۱۴۰۰ - اسفند ۱۴۰۲</p>
+                        <p data-lang-fa="طراحی و توسعه سیستم‌های بک‌اند و فرانت‌اند برای پروژه‌های بزرگ..." data-lang-en="Designed and developed backend and frontend systems for large-scale projects...">طراحی و توسعه سیستم‌های بک‌اند و فرانت‌اند برای پروژه‌های بزرگ...</p>
+                        <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                    </div>
+                    <div class="hidden md:block w-1/12 text-center">
+                        <div class="w-4 h-4 bg-black dark:bg-white rounded-full mx-auto"></div>
+                    </div>
+                    <div class="md:w-5/12"></div>
+                </div>
+
+                <div class="mb-12 flex flex-col md:flex-row items-center md:justify-between w-full animate-on-scroll slide-in-left">
+                    <div class="md:w-5/12 glassmorphism p-1 rounded-2xl hover-border-bw hover-grow cursor-pointer" onclick="openModal('experience-1-modal')">
+                        <div class="flex items-center mb-4">
+                            <img src="images/avangardtech.png" alt="Avangardtech Logo" class="w-12 h-12 rounded-full mr-1 ml-1">
                             <div>
                                 <h3 class="text-xl font-semibold" data-lang-fa="توسعه دهنده ارشد وب" data-lang-en="Senior Web Developer">توسعه دهنده ارشد وب</h3>
                                 <p class="text-gray-600 dark:text-gray-400" data-lang-fa="شرکت الف" data-lang-en="Company A">شرکت الف</p>
@@ -732,9 +775,9 @@
     </footer>
 
     <!-- Modals for detailed content -->
-    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[90] hidden fade-in">
+    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[90] hidden fade-in">
         <!-- Example Modal Structure (will be dynamically populated) -->
-        <div id="experience-1-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="experience-1-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="توسعه دهنده ارشد وب در شرکت الف" data-lang-en="Senior Web Developer at Company A">توسعه دهنده ارشد وب در شرکت الف</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="فروردین ۱۴۰۰ - اسفند ۱۴۰۲" data-lang-en="April 2021 - March 2024">فروردین ۱۴۰۰ - اسفند ۱۴۰۲</p>
@@ -746,7 +789,7 @@
             </ul>
         </div>
         <!-- Add more modal content for other sections (experience, education, projects) -->
-        <div id="experience-2-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="experience-2-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="توسعه دهنده فرانت‌اند در شرکت ب" data-lang-en="Frontend Developer at Company B">توسعه دهنده فرانت‌اند در شرکت ب</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۸ - اسفند ۱۳۹۹" data-lang-en="October 2019 - March 2021">مهر ۱۳۹۸ - اسفند ۱۳۹۹</p>
@@ -756,27 +799,27 @@
                 <li data-lang-fa="همکاری نزدیک با تیم UX/UI برای بهبود طراحی و تجربه کاربری." data-lang-en="Collaborated closely with the UX/UI team to improve design and user experience.">همکاری نزدیک با تیم UX/UI برای بهبود طراحی و تجربه کاربری.</li>
             </ul>
         </div>
-        <div id="education-1-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="education-1-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="کارشناسی مهندسی کامپیوتر در دانشگاه تهران" data-lang-en="B.Sc. Computer Engineering at University of Tehran">کارشناسی مهندسی کامپیوتر در دانشگاه تهران</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۴ - تیر ۱۳۹۸" data-lang-en="October 2015 - July 2019">مهر ۱۳۹۴ - تیر ۱۳۹۸</p>
             <p class="mb-4" data-lang-fa="در طول دوره کارشناسی، بر روی مباحث پیشرفته هوش مصنوعی، یادگیری ماشین و شبکه‌های کامپیوتری تمرکز داشتم. پروژه پایانی من در زمینه پردازش تصویر با استفاده از شبکه‌های عصبی بود." data-lang-en="During my undergraduate studies, I focused on advanced topics in Artificial Intelligence, Machine Learning, and Computer Networks. My final project involved image processing using neural networks.">در طول دوره کارشناسی، بر روی مباحث پیشرفته هوش مصنوعی، یادگیری ماشین و شبکه‌های کامپیوتری تمرکز داشتم. پروژه پایانی من در زمینه پردازش تصویر با استفاده از شبکه‌های عصبی بود.</p>
             <ul class="list-disc list-inside text-left">
-                <li data-lang-fa="معدل کل: ۱۸.۵۰" data-lang-en="GPA: 3.8/4.0">معدل کل: ۱۸.۵۰</li>
+                <li data-lang-fa="معدل کل: ۱۸.۵۰" data-lang-en="GPA: 3.8/4.0">معدل کل: ۱۸٫۵۰</li>
                 <li data-lang-fa="عضو فعال انجمن علمی دانشکده." data-lang-en="Active member of the faculty's scientific association.">عضو فعال انجمن علمی دانشکده.</li>
             </ul>
         </div>
-        <div id="education-2-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="education-2-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="دیپلم ریاضی فیزیک در دبیرستان علامه حلی" data-lang-en="High School Diploma (Math-Physics) at Allame Helli High School">دیپلم ریاضی فیزیک در دبیرستان علامه حلی</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۰ - خرداد ۱۳۹۴" data-lang-en="October 2011 - June 2015">مهر ۱۳۹۰ - خرداد ۱۳۹۴</p>
             <p class="mb-4" data-lang-fa="در این دوره، با تمرکز بر دروس ریاضی و فیزیک، پایه علمی قوی برای ورود به دانشگاه را کسب کردم. در المپیادهای ریاضی و فیزیک منطقه نیز شرکت فعال داشتم." data-lang-en="During this period, with a focus on mathematics and physics, I gained a strong scientific foundation for university admission. I also actively participated in regional math and physics Olympiads.">در این دوره، با تمرکز بر دروس ریاضی و فیزیک، پایه علمی قوی برای ورود به دانشگاه را کسب کردم. در المپیادهای ریاضی و فیزیک منطقه نیز شرکت فعال داشتم.</p>
             <ul class="list-disc list-inside text-left">
-                <li data-lang-fa="معدل دیپلم: ۱۹.۸۰" data-lang-en="Diploma GPA: 19.80">معدل دیپلم: ۱۹.۸۰</li>
+                <li data-lang-fa="معدل دیپلم: ۱۹.۸۰" data-lang-en="Diploma GPA: 19.80">معدل دیپلم: ۱۹٫۸۰</li>
                 <li data-lang-fa="کسب رتبه اول در مسابقات رباتیک مدرسه‌ای." data-lang-en="Achieved first place in school robotics competitions.">کسب رتبه اول در مسابقات رباتیک مدرسه‌ای.</li>
             </ul>
         </div>
-        <div id="education-3-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="education-3-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="دوره هوش مصنوعی در Coursera" data-lang-en="AI Course on Coursera">دوره هوش مصنوعی در Coursera</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="تابستان ۱۴۰۱" data-lang-en="Summer 2022">تابستان ۱۴۰۱</p>
@@ -786,31 +829,31 @@
                 <li data-lang-fa="پروژه نهایی: تشخیص اشیا با YOLO." data-lang-en="Final Project: Object detection with YOLO.">پروژه نهایی: تشخیص اشیا با YOLO.</li>
             </ul>
         </div>
-        <div id="project-1-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="project-1-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="سیستم مدیریت محتوا (CMS)" data-lang-en="Content Management System (CMS)">سیستم مدیریت محتوا (CMS)</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="کارفرما: شرکت X | تاریخ: بهار ۱۴۰۲" data-lang-en="Client: Company X | Date: Spring 2023">کارفرما: شرکت X | تاریخ: بهار ۱۴۰۲</p>
             <p class="mb-4" data-lang-fa="این پروژه شامل طراحی و پیاده‌سازی یک سیستم مدیریت محتوای سفارشی برای یک شرکت بزرگ بود. هدف اصلی، فراهم کردن ابزاری قدرتمند و در عین حال ساده برای مدیران وب‌سایت جهت به‌روزرسانی و مدیریت محتوا بدون نیاز به دانش فنی بود. از React برای فرانت‌اند و Node.js با PostgreSQL برای بک‌اند استفاده شد." data-lang-en="This project involved the design and implementation of a custom Content Management System for a large company. The main goal was to provide a powerful yet simple tool for website administrators to update and manage content without requiring technical knowledge. React was used for the frontend, and Node.js with PostgreSQL for the backend.">این پروژه شامل طراحی و پیاده‌سازی یک سیستم مدیریت محتوای سفارشی برای یک شرکت بزرگ بود. هدف اصلی، فراهم کردن ابزاری قدرتمند و در عین حال ساده برای مدیران وب‌سایت جهت به‌روزرسانی و مدیریت محتوا بدون نیاز به دانش فنی بود. از React برای فرانت‌اند و Node.js با PostgreSQL برای بک‌اند استفاده شد.</p>
             <a href="https://github.com/yourusername/project1" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه در گیت‌هاب" data-lang-en="View Project on GitHub">مشاهده پروژه در گیت‌هاب</a>
         </div>
-        <div id="project-2-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="project-2-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="اپلیکیشن موبایل رزرو خدمات" data-lang-en="Service Booking Mobile Application">اپلیکیشن موبایل رزرو خدمات</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="کارفرما: استارتاپ Y | تاریخ: تابستان ۱۴۰۱" data-lang-en="Client: Startup Y | Date: Summer 2022">کارفرما: استارتاپ Y | تاریخ: تابستان ۱۴۰۱</p>
             <p class="mb-4" data-lang-fa="توسعه یک اپلیکیشن موبایل برای رزرو انواع خدمات (مانند آرایشگاه، پزشک، تعمیرات) با استفاده از React Native. این اپلیکیشن شامل قابلیت‌های احراز هویت، جستجو، فیلتر، پرداخت آنلاین و سیستم امتیازدهی بود." data-lang-en="Developed a mobile application for booking various services (e.g., barbershop, doctor, repairs) using React Native. This application included features such as authentication, search, filter, online payment, and a rating system.">توسعه یک اپلیکیشن موبایل برای رزرو انواع خدمات (مانند آرایشگاه، پزشک، تعمیرات) با استفاده از React Native. این اپلیکیشن شامل قابلیت‌های احراز هویت، جستجو، فیلتر، پرداخت آنلاین و سیستم امتیازدهی بود.</p>
             <a href="https://github.com/yourusername/project2" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه در گیت‌هاب" data-lang-en="View Project on GitHub">مشاهده پروژه در گیت‌هاب</a>
         </div>
-        <div id="project-3-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+        <div id="project-3-modal" class="modal-content glassmorphism p-6 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
             <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
             <h3 class="text-2xl font-bold mb-4" data-lang-fa="وب‌سایت فروشگاهی" data-lang-en="E-commerce Website">وب‌سایت فروشگاهی</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="کارفرما: فروشگاه Z | تاریخ: پاییز ۱۴۰۰" data-lang-en="Client: Store Z | Date: Fall 2021">کارفرما: فروشگاه Z | تاریخ: پاییز ۱۴۰۰</p>
-            <p class="mb-4" data-lang-fa="طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe برای یک فروشگاه آنلاین. این پروژه شامل مدیریت محصولات، سبد خرید، فرآیند پرداخت امن و پنل مدیریت سفارشات بود." data-lang-en="Designed and implemented an e-commerce website with Next.js and Stripe for an online store. This project included product management, shopping cart, secure payment processing, and an order management panel.">طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe برای یک فروشگاه آنلاین. این پروژه شامل مدیریت محصولات، سبد خرید، فرآیند پرداخت امن و پنل مدیریت سفارشات بود.</p>
+            <p class="mb-4" data-lang-fa="طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe برای یک فروشگاه آنلاین. این پروژه شامل مدیریت محصولات، سبد خرید، فرآیند پرداخت امن و پنل مدیریت سفارشات بود." data-lang-en="Designed and implemented an e-commerce website with Next.js and Stripe for an online store. This project included product management, shopping cart, secure payment processing, and an order management panel.">طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe برای یک فروشگاه آنلاین. این پروژه شامل مدیریت محصولات، سبد خرید، فرآیند پرداخت امن و پنل مدیریت سفارش ها بود.</p>
             <a href="https://github.com/yourusername/project3" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه در گیت‌هاب" data-lang-en="View Project on GitHub">مشاهده پروژه در گیت‌هاب</a>
         </div>
     </div>
 
     <!-- Image Modal -->
-    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[95] hidden fade-in">
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[95] hidden fade-in">
         <div class="relative scale-in">
             <button class="absolute top-1 right-4 text-white text-3xl hover-bw" onclick="closeImageModal()"><i class="fas fa-times"></i></button>
             <img id="modal-image" src="" alt="Enlarged Image" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl">
@@ -836,6 +879,92 @@
         let currentTheme = localStorage.getItem('theme') || 'light';
 
 
+        // پیکربندی و راه‌اندازی Particle.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 50,
+                        density: {
+                            enable: true,
+                            value_area: 1000
+                        }
+                    },
+                    color: {
+                        value: "#7f7f7f"
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 1,
+                            color: "#7f7f7f"
+                        }
+                    },
+                    opacity: {
+                        value: 0.1,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 100,
+                            opacity_min: 1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 2,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 400,
+                        color: "#7f7f7f",
+                        opacity: 1,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "top",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: false,
+                            mode: "grab"
+                        },
+                        onclick: {
+                            enable: false,
+                            mode: "push"
+                        },
+                        resize: false
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
 
         // افکت دنبال کننده موس
         const cursorContainer = document.getElementById('cursor-effect');
