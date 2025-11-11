@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="fa" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="رزومه نریمان خالقی - توسعه دهنده وب، برنامه نویس و متخصص فناوری اطلاعات. مشاهده سوابق کاری، تحصیلی، مهارت‌ها و پروژه‌ها.">
+    <meta name="keywords" content="نریمان خالقی, رزومه, توسعه دهنده وب, برنامه نویس, گیت هاب, پورتفولیو, Nariman Khaleghi, resume, web developer, programmer, github, portfolio">
+    <meta name="author" content="Nariman Khaleghi">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="رزومه نریمان خالقی">
+    <meta property="og:description" content="رزومه نریمان خالقی - توسعه دهنده وب، برنامه نویس و متخصص فناوری اطلاعات.">
+    <meta property="og:image" content="URL_TO_YOUR_PROFILE_IMAGE">
+    <meta property="og:url" content="YOUR_GITHUB_PAGE_URL">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="YOUR_GITHUB_PAGE_URL">
+
+    <title>رزومه نریمان خالقی | Nariman Khaleghi Resume</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts for Vazirmatn RD UI FD (Persian) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn+RD+UI:wght@100..900&display=swap" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <!-- Google Fonts for Poppins (English) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color-light: #ffffff;
+            --text-color-light: #000000;
+            --glass-bg-light: rgba(0, 0, 0, 0.1);
+            --border-color-light: rgba(0, 0, 0, 0.2);
+            --active-color-light: rgb(127, 127, 127); /* Active elements in light mode */
+            --active-bg-light: rgb(0, 0, 0);
+        }
+
+        .dark {
+            --bg-color-dark: #000000;
+            --text-color-dark: #ffffff;
+            --glass-bg-dark: rgba(255, 255, 255, 0.1);
+            --border-color-dark: rgba(255, 255, 255, 0.2);
+            --active-color-dark: rgb(127, 127, 127); /* Active elements in dark mode */
+            --active-bg-dark: rgb(255, 255, 255);
+        }
+
+        body {
+            font-family: 'Vazirmatn RD UI', sans-serif; /* Default for Persian */
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        .lang-en body {
+            font-family: 'Poppins', sans-serif; /* For English */
+        }
+
+        .glassmorphism {
+            background-color: var(--glass-bg-light);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color-light);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dark .glassmorphism {
+            background-color: var(--glass-bg-dark);
+            border: 1px solid var(--border-color-dark);
+        }
+
+        /* Active/Hover styles for black and white */
+        .active-bw {
+            color: var(--active-color-light);
+            background-color: var(--active-bg-light);
+            border-color: var(--active-color-light);
+        }
+        .dark .active-bw {
+            color: var(--active-color-dark);
+            background-color: var(--active-bg-dark);
+            border-color: var(--active-color-dark);
+        }
+
+        .hover-bw:hover {
+            color: var(--active-color-light);
+            background-color: var(--active-bg-light);
+            transition: all 0.3s ease;
+        }
+        .dark .hover-bw:hover {
+            color: var(--active-color-dark);
+            background-color: var(--active-bg-dark);
+        }
+        .hover-border-bw:hover {
+            border-color: var(--active-color-light);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .hover-border-bw:hover {
+            border-color: var(--active-color-dark);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(128, 128, 128, 0.5);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(128, 128, 128, 0.7);
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        #cursor-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .cursor-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            transition: transform 0.1s linear, opacity 0.4s ease;
+            mix-blend-mode: difference;
+        }
+
+        body.dark .cursor-circle {
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .scale-in {
+            animation: scaleIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Hover effects */
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Progress Circle */
+        .progress-circle {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background: conic-gradient(var(--active-color-light) var(--progress), #e0e0e0 0deg);
+            transition: background 0.3s ease;
+        }
+
+        .dark .progress-circle {
+            background: conic-gradient(var(--active-color-dark) var(--progress), #333 0deg);
+        }
+
+        .progress-circle::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--bg-color-light);
+            transition: background-color 0.3s ease;
+        }
+
+        .dark .progress-circle::before {
+            background-color: var(--bg-color-dark);
+        }
+
+        .progress-circle span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            #section{
+
+            }
+            #navbar {
+                margin: 0px;
+                padding: 0px;
+                right: 1px;
+            }
+            #navbar span {
+                display: none; /* Ensure text is hidden on desktop for thin nav */
+            }
+            #nav-item{
+                margin: 0px;
+                padding: 0px;
+                top: 0px;
+                bottom: 0px;
+            }
+            #navbar-left {
+                margin: 0px;
+                padding: 0px;
+                left: 1px;
+            }
+            #navbar-left span {
+                display: none; /* Ensure text is hidden on desktop for thin nav */
+            }
+            #main-content {
+                padding-right: 2.3rem;
+                padding-left: 0.1rem; /* Reset padding for mobile */
+                padding-bottom: 0px;
+            }
+            #header .flex-row-reverse {
+                flex-direction: row; /* Keep order consistent on mobile */
+            }
+            #header .flex-row-reverse > *:first-child {
+                order: 2; /* Move name to center */
+            }
+            #header .flex-row-reverse > *:nth-child(2) {
+                order: 1; /* Move lang to left */
+            }
+            #header .flex-row-reverse > *:nth-child(3) {
+                order: 3; /* Move theme to right */
+            }
+        }
+
+        /* Desktop Navigation */
+        @media (min-width: 769px) {
+            #section{
+
+            }
+            #navbar {
+                margin: 0px;
+                padding: 0px;
+                right: 1px;
+            }
+            #nav-item{
+                margin: 0px;
+                padding: 0px;
+                top: 0px;
+                bottom: 0px;
+            }
+            #navbar span {
+                display: none; /* Ensure text is hidden on desktop for thin nav */
+            }
+            #navbar-left {
+                margin: 0px;
+                padding: 0px;
+                left: 0px;
+            }
+            #nav-item{
+                margin: 0px;
+                padding: 0px;
+                top: 0px;
+                bottom: 0px;
+            }
+            #navbar-left span {
+                display: none; /* Ensure text is hidden on desktop for thin nav */
+            }
+            #main-content {
+                padding-right: 100px;
+                padding-bottom: 0px; /* Add padding to main content to prevent overlap */
+            }
+        }
+    </style>
+</head>
+<!--<body class="text-gray-900 dark:text-gray-100 transition-colors duration-300"></body>-->
+<body>
+    <div id="cursor-effect">
+        <div class="cursor-circle" id="circle1"></div>
+        <div class="cursor-circle" id="circle2"></div>
+        <div class="cursor-circle" id="circle3"></div>
+    </div>
+    <!-- Welcome Pop-up -->
+    <div id="welcome-popup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] fade-in">
+        <div class="glassmorphism p-1 rounded-2xl shadow-lg max-w-md w-full text-center scale-in">
+            <h2 class="text-2xl font-bold mb-6" data-lang-fa="خوش آمدید!" data-lang-en="Welcome!">خوش آمدید!</h2>
+
+            <div class="mb-6 flex items-center justify-center">
+                <span class="text-lg font-medium mr-0" data-lang-fa="زبان:" data-lang-en="Language:">زبان:</span>
+                <div class="flex items-center glassmorphism p-1 rounded-full">
+                    <button id="lang-fa-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-lang="fa">
+                        <i class="fas fa-globe"></i> فارسی
+                    </button>
+                    <button id="lang-en-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-lang="en">
+                        <i class="fas fa-globe"></i> EN
+                    </button>
+                </div>
+            </div>
+
+            <div class="mb-8 flex items-center justify-center">
+                <span class="text-lg font-medium mr-0" data-lang-fa="تم:" data-lang-en="Theme:">تم:</span>
+                <div class="flex items-center glassmorphism p-1 rounded-full">
+                    <button id="theme-light-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-theme="light">
+                        <i class="fas fa-sun"></i> لایت
+                    </button>
+                    <button id="theme-dark-btn" class="px-4 py-10 rounded-full text-sm font-semibold hover-bw transition-all duration-300" data-theme="dark">
+                        <i class="fas fa-moon"></i> دارک
+                    </button>
+                </div>
+            </div>
+
+            <button id="enter-btn" class="bg-black text-white dark:bg-white dark:text-black px-8 py-10 rounded-full text-lg font-semibold hover-grow transition-all duration-300 shadow-lg" data-lang-fa="ورود" data-lang-en="Enter">ورود</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-40 glassmorphism p-1 flex items-center justify-between h-16 transition-all duration-300">
+        <!-- Language Switch (Left) -->
+        <div class="flex items-center">
+            <button id="header-lang-switch" class="p-1 rounded-full hover-bw transition-all duration-300 text-xl">
+                <i class="fas fa-globe"></i>
+            </button>
+        </div>
+
+        <!-- Name (Center) -->
+        <h1 id="header-name" class="text-1xl font-bold transition-all duration-300" data-lang-fa="رزومه نریمان خالقی" data-lang-en="Nariman Khaleghi CV">نریمان خالقی</h1>
+
+        <!-- Theme Switch (Right) -->
+        <div class="flex items-center">
+            <button id="header-theme-switch" class="p-1 rounded-full hover-bw transition-all duration-300 text-xl">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto px-4 py-10 min-h-screen relative">
+        <!-- Navigation Bar (Right, fixed) -->
+        <nav id="navbar" class="fixed right-4 top-1/2 transform -translate-y-1/2 z-30 glassmorphism p-1 rounded-full flex flex-col items-center space-y-1 transition-all duration-300">
+            <a href="#profile" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="profile">
+                <i class="fas fa-user text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="پروفایل" data-lang-en="Profile">پروفایل</span>
+            </a>
+            <a href="#experience" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="experience">
+                <i class="fas fa-briefcase text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="سوابق کاری" data-lang-en="Experience">سوابق کاری</span>
+            </a>
+            <a href="#education" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="education">
+                <i class="fas fa-graduation-cap text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="تحصیلات" data-lang-en="Education">تحصیلات</span>
+            </a>
+            <a href="#languages" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="languages">
+                <i class="fas fa-language text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="زبان‌ها" data-lang-en="Languages">زبان‌ها</span>
+            </a>
+            <a href="#projects" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="projects">
+                <i class="fas fa-project-diagram text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="پروژه‌ها" data-lang-en="Projects">پروژه‌ها</span>
+            </a>
+            <a href="#hard-skills" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="hard-skills">
+                <i class="fas fa-laptop-code text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="مهارت‌های سخت" data-lang-en="Hard Skills">مهارت‌های سخت</span>
+            </a>
+            <a href="#soft-skills" class="nav-item p-1 rounded-full hover-bw transition-all duration-300 flex items-center" data-section="soft-skills">
+                <i class="fas fa-handshake text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="مهارت‌های نرم" data-lang-en="Soft Skills">مهارت‌های نرم</span>
+            </a>
+            <a href="#certificates" class="text-center hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item" data-section="certificates">
+                <i class="fas fa-certificate text-xl"></i>
+                <span class="ml-0 hidden md:inline" data-lang-fa="مدارک" data-lang-en="Certificates">مدارک</span>
+            </a>
+        </nav>
+        <nav id="navbar-left" class="fixed left-4 top-1/2 transform -translate-y-1/2 z-30 glassmorphism p-1 rounded-full flex flex-col items-center space-y-1 transition-all duration-300">
+            <a href="tel:+989123456789" class="text-center hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fas fa-phone text-xl"></i></a>
+            <a href="mailto:your.email@example.com" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fas fa-envelope text-xl"></i></a>
+            <a href="https://yourwebsite.com" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fas fa-globe text-xl"></i></a>
+            <a href="https://github.com/yourusername" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-github text-xl"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-linkedin text-xl"></i></a>
+<!--        <a href="https://instagram.com/yourusername" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://t.me/yourusername" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-telegram text-xl"></i></a>
+            <a href="https://wa.me/989123456789" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a href="https://x.com/yourusername" target="_blank" class="hover-bw hover-grow rounded-full transition-all duration-300 flex items-center p-1 nav-item"><i class="fab fa-twitter text-xl"></i></a>-->
+        </nav>
+        
+        <!-- <section id="profile" class="mb-1 py-10 fade-in" style="animation-delay: 0.2s;"> -->
+        <section id="profile" class="mb-1 py-20 fade-in" style="animation-delay: 0.2s;">
+            <h2 class="text-6xl font-extrabold text-center mb-12" data-lang-fa="درباره من" data-lang-en="About Me">درباره من</h2>
+            <div class="glassmorphism p-1 rounded-2xl max-w-2xl mx-auto text-center hover-border-bw hover-grow">
+                <img src="./image/Nariman-Khaleghi-نریمان-خالقی.jpg" alt="Nariman Khaleghi Profile" class="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-black dark:border-white shadow-lg">
+                <h3 class="text-3xl font-bold mb-4" data-lang-fa="نریمان خالقی" data-lang-en="Nariman Khaleghi">نریمان خالقی</h3>
+                <p class="text-lg mb-6" data-lang-fa="توسعه دهنده وب با تجربه در ساخت راه حل‌های مقیاس‌پذیر و کاربرپسند." data-lang-en="Experienced web developer passionate about building scalable and user-friendly solutions.">توسعه دهنده وب با تجربه در ساخت راه حل‌های مقیاس‌پذیر و کاربرپسند.</p>
+<!--                 <div class="flex justify-center space-x-6 rtl:space-x-reverse text-1xl">
+                    <a href="tel:+989123456789" class="hover-bw hover-grow transition-all duration-300"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:your.email@example.com" class="hover-bw hover-grow transition-all duration-300"><i class="fas fa-envelope"></i></a>
+                    <a href="https://yourwebsite.com" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fas fa-globe"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/yourusername" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/989123456789" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/yourusername" target="_blank" class="hover-bw hover-grow transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="experience" class="mb-1 py-10 fade-in" style="animation-delay: 0.4s;">
+            <h2 class="text-4xl font-extrabold text-center mb-12" data-lang-fa="سوابق کاری من" data-lang-en="My Work Experience">سوابق کاری من</h2>
+            <div class="relative max-w-7xl mx-auto">
+                <!-- Roadmap Line -->
+                <div class="absolute hidden md:block w-1 bg-gray-300 dark:bg-gray-700 h-full left-1/2 transform -translate-x-1/2 rounded-full"></div>
+
+                <!-- Experience Item 1 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center md:justify-between w-full animate-on-scroll slide-in-left">
+                    <div class="md:w-5/12 glassmorphism p-1 rounded-2xl hover-border-bw hover-grow cursor-pointer" onclick="openModal('experience-1-modal')">
+                        <div class="flex items-center mb-4">
+                            <img src="./assets/image/Nariman-Khaleghi-نریمان-خالقی.jpg" alt="Company Logo" class="w-12 h-12 rounded-full mr-1 ml-1">
+                            <div>
+                                <h3 class="text-xl font-semibold" data-lang-fa="توسعه دهنده ارشد وب" data-lang-en="Senior Web Developer">توسعه دهنده ارشد وب</h3>
+                                <p class="text-gray-600 dark:text-gray-400" data-lang-fa="شرکت الف" data-lang-en="Company A">شرکت الف</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="فروردین ۱۴۰۰ - اسفند ۱۴۰۲" data-lang-en="April 2021 - March 2024">فروردین ۱۴۰۰ - اسفند ۱۴۰۲</p>
+                        <p data-lang-fa="طراحی و توسعه سیستم‌های بک‌اند و فرانت‌اند برای پروژه‌های بزرگ..." data-lang-en="Designed and developed backend and frontend systems for large-scale projects...">طراحی و توسعه سیستم‌های بک‌اند و فرانت‌اند برای پروژه‌های بزرگ...</p>
+                        <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                    </div>
+                    <div class="hidden md:block w-1/12 text-center">
+                        <div class="w-4 h-4 bg-black dark:bg-white rounded-full mx-auto"></div>
+                    </div>
+                    <div class="md:w-5/12"></div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center md:justify-between w-full animate-on-scroll slide-in-right">
+                    <div class="md:w-5/12"></div>
+                    <div class="hidden md:block w-1/12 text-center">
+                        <div class="w-4 h-4 bg-black dark:bg-white rounded-full mx-auto"></div>
+                    </div>
+                    <div class="md:w-5/12 glassmorphism p-1 rounded-2xl hover-border-bw hover-grow cursor-pointer" onclick="openModal('experience-2-modal')">
+                        <div class="flex items-center mb-4">
+                            <img src="https://via.placeholder.com/50" alt="Company Logo" class="w-12 h-12 rounded-full mr-1 ml-1">
+                            <div>
+                                <h3 class="text-xl font-semibold" data-lang-fa="توسعه دهنده فرانت‌اند" data-lang-en="Frontend Developer">توسعه دهنده فرانت‌اند</h3>
+                                <p class="text-gray-600 dark:text-gray-400" data-lang-fa="شرکت ب" data-lang-en="Company B">شرکت ب</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۸ - اسفند ۱۳۹۹" data-lang-en="October 2019 - March 2021">مهر ۱۳۹۸ - اسفند ۱۳۹۹</p>
+                        <p data-lang-fa="پیاده‌سازی رابط کاربری با React و Vue.js، بهینه‌سازی عملکرد وب‌سایت..." data-lang-en="Implemented user interfaces with React and Vue.js, optimized website performance...">پیاده‌سازی رابط کاربری با React و Vue.js، بهینه‌سازی عملکرد وب‌سایت...</p>
+                        <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                    </div>
+                </div>
+                <!-- Add more experience items as needed -->
+            </div>
+        </section>
+
+        <section id="education" class="py-10 fade-in" style="animation-delay: 0.6s;">
+            <h2 class="text-4xl font-extrabold text-center mb-5" data-lang-fa="تحصیلات من" data-lang-en="My Education">تحصیلات من</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-8xl mx-auto justify-items-center">
+                <!-- Education Item 1 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in cursor-pointer w-full max-w-sm" onclick="openModal('education-1-modal')">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-fa="کارشناسی مهندسی کامپیوتر" data-lang-en="B.Sc. Computer Engineering">کارشناسی مهندسی کامپیوتر</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2" data-lang-fa="دانشگاه تهران" data-lang-en="University of Tehran">دانشگاه تهران</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۴ - تیر ۱۳۹۸" data-lang-en="October 2015 - July 2019">مهر ۱۳۹۴ - تیر ۱۳۹۸</p>
+                    <p data-lang-fa="تمرکز بر هوش مصنوعی و شبکه‌های کامپیوتری..." data-lang-en="Focused on Artificial Intelligence and Computer Networks...">تمرکز بر هوش مصنوعی و شبکه‌های کامپیوتری...</p>
+                    <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                </div>
+                <!-- Education Item 2 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in cursor-pointer w-full max-w-sm" style="animation-delay: 0.2s;" onclick="openModal('education-2-modal')">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-fa="دیپلم ریاضی فیزیک" data-lang-en="High School Diploma (Math-Physics)">دیپلم ریاضی فیزیک</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2" data-lang-fa="دبیرستان علامه حلی" data-lang-en="Allame Helli High School">دبیرستان علامه حلی</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۰ - خرداد ۱۳۹۴" data-lang-en="October 2011 - June 2015">مهر ۱۳۹۰ - خرداد ۱۳۹۴</p>
+                    <p data-lang-fa="کسب رتبه برتر در المپیادهای علمی..." data-lang-en="Achieved top ranks in scientific Olympiads...">کسب رتبه برتر در المپیادهای علمی...</p>
+                    <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                </div>
+                <!-- Education Item 3 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in cursor-pointer w-full max-w-sm" style="animation-delay: 0.4s;" onclick="openModal('education-3-modal')">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-fa="دوره هوش مصنوعی" data-lang-en="AI Course">دوره هوش مصنوعی</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2" data-lang-fa="Coursera" data-lang-en="Coursera">Coursera</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="تابستان ۱۴۰۱" data-lang-en="Summer 2022">تابستان ۱۴۰۱</p>
+                    <p data-lang-fa="گذراندن دوره جامع هوش مصنوعی و یادگیری ماشین..." data-lang-en="Completed comprehensive AI and Machine Learning course...">گذراندن دوره جامع هوش مصنوعی و یادگیری ماشین...</p>
+                    <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                </div>
+                <!-- Add more education items as needed -->
+            </div>
+        </section>
+
+        <section id="languages" class="mb-1 py-10 fade-in" style="animation-delay: 0.8s;">
+            <h2 class="text-4xl font-extrabold text-center mb-12" data-lang-fa="زبان‌هایی که مسلط هستم" data-lang-en="Languages I Master">زبان‌هایی که مسلط هستم</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-5xl mx-auto justify-items-center">
+                <!-- Language Item 1 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="فارسی" data-lang-en="Persian">فارسی</h3>
+                    <div class="flex justify-around mb-4">
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle" style="--progress: 100%;"><span>100%</span></div>
+                            <span class="mt-0 text-sm" data-lang-fa="صحبت کردن" data-lang-en="Speaking">صحبت کردن</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle" style="--progress: 100%;"><span>100%</span></div>
+                            <span class="mt-0 text-sm" data-lang-fa="خواندن" data-lang-en="Reading">خواندن</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle" style="--progress: 100%;"><span>100%</span></div>
+                            <span class="mt-0 text-sm" data-lang-fa="نوشتن" data-lang-en="Writing">نوشتن</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Language Item 2 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="انگلیسی" data-lang-en="English">انگلیسی</h3>
+                    <div class="flex justify-around mb-4">
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle" style="--progress: 90%;"><span>90%</span></div>
+                            <span class="mt-0 text-sm" data-lang-fa="صحبت کردن" data-lang-en="Speaking">صحبت کردن</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle" style="--progress: 95%;"><span>95%</span></div>
+                            <span class="mt-0 text-sm" data-lang-fa="خواندن" data-lang-en="Reading">خواندن</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle" style="--progress: 85%;"><span>85%</span></div>
+                            <span class="mt-0 text-sm" data-lang-fa="نوشتن" data-lang-en="Writing">نوشتن</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more language items as needed -->
+            </div>
+        </section>
+
+        <section id="projects" class="mb-1 py-10 fade-in" style="animation-delay: 1s;">
+            <h2 class="text-4xl font-extrabold text-center mb-12" data-lang-fa="پروژه‌هایی که کار کردم" data-lang-en="My Projects">پروژه‌هایی که کار کردم</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 max-w-7xl mx-auto justify-items-center">
+                <!-- Project Item 1 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in cursor-pointer w-full max-w-sm" onclick="openModal('project-1-modal')">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-fa="سیستم مدیریت محتوا" data-lang-en="Content Management System">سیستم مدیریت محتوا</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2" data-lang-fa="کارفرما: شرکت X" data-lang-en="Client: Company X">کارفرما: شرکت X</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="تاریخ: بهار ۱۴۰۲" data-lang-en="Date: Spring 2023">تاریخ: بهار ۱۴۰۲</p>
+                    <p data-lang-fa="توسعه یک CMS سفارشی برای مدیریت آسان محتوای وب‌سایت..." data-lang-en="Developed a custom CMS for easy website content management...">توسعه یک CMS سفارشی برای مدیریت آسان محتوای وب‌سایت...</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه" data-lang-en="View Project">مشاهده پروژه</a>
+                    <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                </div>
+                <!-- Project Item 2 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in cursor-pointer w-full max-w-sm" style="animation-delay: 0.2s;" onclick="openModal('project-2-modal')">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-fa="اپلیکیشن موبایل رزرو" data-lang-en="Booking Mobile App">اپلیکیشن موبایل رزرو</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2" data-lang-fa="کارفرما: استارتاپ Y" data-lang-en="Client: Startup Y">کارفرما: استارتاپ Y</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="تاریخ: تابستان ۱۴۰۱" data-lang-en="Date: Summer 2022">تاریخ: تابستان ۱۴۰۱</p>
+                    <p data-lang-fa="ساخت اپلیکیشن رزرو خدمات با React Native..." data-lang-en="Built a service booking application with React Native...">ساخت اپلیکیشن رزرو خدمات با React Native...</p>
+                    <a href="https://github.com/yourusername/project2" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه" data-lang-en="View Project">مشاهده پروژه</a>
+                    <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                </div>
+                <!-- Project Item 3 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in cursor-pointer w-full max-w-sm" style="animation-delay: 0.4s;" onclick="openModal('project-3-modal')">
+                    <h3 class="text-xl font-semibold mb-2" data-lang-fa="وب‌سایت فروشگاهی" data-lang-en="E-commerce Website">وب‌سایت فروشگاهی</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2" data-lang-fa="کارفرما: فروشگاه Z" data-lang-en="Client: Store Z">کارفرما: فروشگاه Z</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-fa="تاریخ: پاییز ۱۴۰۰" data-lang-en="Date: Fall 2021">تاریخ: پاییز ۱۴۰۰</p>
+                    <p data-lang-fa="طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe..." data-lang-en="Designed and implemented an e-commerce website with Next.js and Stripe...">طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe...</p>
+                    <a href="https://github.com/yourusername/project3" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه" data-lang-en="View Project">مشاهده پروژه</a>
+                    <span class="text-black dark:text-white text-sm mt-0 block" data-lang-fa="بیشتر بخوانید" data-lang-en="Read More">بیشتر بخوانید</span>
+                </div>
+                <!-- Add more project items as needed -->
+            </div>
+        </section>
+
+        <section id="hard-skills" class="mb-1 py-10 fade-in" style="animation-delay: 1.2s;">
+            <h2 class="text-4xl font-extrabold text-center mb-12" data-lang-fa="مهارت‌های سخت من" data-lang-en="My Hard Skills">مهارت‌های سخت من</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 max-w-6xl mx-auto justify-items-center">
+                <!-- Hard Skill Item 1 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="JavaScript" data-lang-en="JavaScript">JavaScript</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 90%;"><span>90%</span></div>
+                    </div>
+                </div>
+                <!-- Hard Skill Item 2 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.1s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="React.js" data-lang-en="React.js">React.js</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 85%;"><span>85%</span></div>
+                    </div>
+                </div>
+                <!-- Hard Skill Item 3 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="Node.js" data-lang-en="Node.js">Node.js</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 80%;"><span>80%</span></div>
+                    </div>
+                </div>
+                <!-- Hard Skill Item 4 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.3s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="Python" data-lang-en="Python">Python</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 75%;"><span>75%</span></div>
+                    </div>
+                </div>
+                <!-- Add more hard skills as needed -->
+            </div>
+        </section>
+
+        <section id="soft-skills" class="mb-1 py-10 fade-in" style="animation-delay: 1.4s;">
+            <h2 class="text-4xl font-extrabold text-center mb-12" data-lang-fa="مهارت‌های نرم من" data-lang-en="My Soft Skills">مهارت‌های نرم من</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 max-w-6xl mx-auto justify-items-center">
+                <!-- Soft Skill Item 1 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="حل مسئله" data-lang-en="Problem Solving">حل مسئله</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 95%;"><span>95%</span></div>
+                    </div>
+                </div>
+                <!-- Soft Skill Item 2 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.1s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="کار تیمی" data-lang-en="Teamwork">کار تیمی</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 90%;"><span>90%</span></div>
+                    </div>
+                </div>
+                <!-- Soft Skill Item 3 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="ارتباطات" data-lang-en="Communication">ارتباطات</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 88%;"><span>88%</span></div>
+                    </div>
+                </div>
+                <!-- Soft Skill Item 4 -->
+                <div class="glassmorphism p-1 rounded-2xl text-center hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.3s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="مدیریت زمان" data-lang-en="Time Management">مدیریت زمان</h3>
+                    <div class="flex justify-center">
+                        <div class="progress-circle" style="--progress: 85%;"><span>85%</span></div>
+                    </div>
+                </div>
+                <!-- Add more soft skills as needed -->
+            </div>
+        </section>
+
+        <section id="certificates" class="mb-1 py-10 fade-in" style="animation-delay: 1.6s;">
+            <h2 class="text-4xl font-extrabold text-center mb-12" data-lang-fa="مدارک و دوره‌های من" data-lang-en="My Certificates & Courses">مدارک و دوره‌های من</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 max-w-7xl mx-auto justify-items-center">
+                <!-- Certificate Item 1 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="مدرک توسعه وب فول‌استک" data-lang-en="Full-Stack Web Development Certificate">مدرک توسعه وب فول‌استک</h3>
+                    <img src="https://via.placeholder.com/300x200" alt="Certificate 1" class="w-full h-40 object-cover rounded-lg mb-4 cursor-pointer" onclick="openImageModal('https://via.placeholder.com/800x600')">
+                    <a href="https://www.coursera.org/certificate/your-certificate-id" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده مدرک" data-lang-en="View Certificate">مشاهده مدرک</a>
+                </div>
+                <!-- Certificate Item 2 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.1s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="دوره پیشرفته React" data-lang-en="Advanced React Course">دوره پیشرفته React</h3>
+                    <img src="https://via.placeholder.com/300x200" alt="Certificate 2" class="w-full h-40 object-cover rounded-lg mb-4 cursor-pointer" onclick="openImageModal('https://via.placeholder.com/800x600')">
+                    <a href="https://udemy.com/certificate/your-certificate-id" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده مدرک" data-lang-en="View Certificate">مشاهده مدرک</a>
+                </div>
+                <!-- Certificate Item 3 -->
+                <div class="glassmorphism p-1 rounded-2xl hover-border-bw hover-grow animate-on-scroll scale-in w-full max-w-sm" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-semibold mb-4" data-lang-fa="مدرک AWS Certified Developer" data-lang-en="AWS Certified Developer Certificate">مدرک AWS Certified Developer</h3>
+                    <img src="https://via.placeholder.com/300x200" alt="Certificate 3" class="w-full h-40 object-cover rounded-lg mb-4 cursor-pointer" onclick="openImageModal('https://via.placeholder.com/800x600')">
+                    <a href="https://aws.amazon.com/certification/your-certificate-id" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده مدرک" data-lang-en="View Certificate">مشاهده مدرک</a>
+                </div>
+                <!-- Add more certificate items as needed -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism p-1 text-center mt-0 transition-all duration-300">
+        <div class="flex justify-center space-x-6 rtl:space-x-reverse text-1xl mb-6">
+            <a href="tel:+989123456789" class="hover-bw transition-all duration-300"><i class="fas fa-phone"></i></a>
+            <a href="mailto:your.email@example.com" class="hover-bw transition-all duration-300"><i class="fas fa-envelope"></i></a>
+            <a href="https://yourwebsite.com" target="_blank" class="hover-bw transition-all duration-300"><i class="fas fa-globe"></i></a>
+            <a href="https://github.com/yourusername" target="_blank" class="hover-bw transition-all duration-300"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover-bw transition-all duration-300"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/yourusername" target="_blank" class="hover-bw transition-all duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/yourusername" target="_blank" class="hover-bw transition-all duration-300"><i class="fab fa-telegram"></i></a>
+            <a href="https://wa.me/989123456789" target="_blank" class="hover-bw transition-all duration-300"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/yourusername" target="_blank" class="hover-bw transition-all duration-300"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400" data-lang-fa="&copy; ۱۴۰۳ نریمان خالقی. تمامی حقوق محفوظ است." data-lang-en="&copy; 2024 Nariman Khaleghi. All rights reserved.">&copy; ۱۴۰۳ نریمان خالقی. تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <!-- Modals for detailed content -->
+    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[90] hidden fade-in">
+        <!-- Example Modal Structure (will be dynamically populated) -->
+        <div id="experience-1-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="توسعه دهنده ارشد وب در شرکت الف" data-lang-en="Senior Web Developer at Company A">توسعه دهنده ارشد وب در شرکت الف</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="فروردین ۱۴۰۰ - اسفند ۱۴۰۲" data-lang-en="April 2021 - March 2024">فروردین ۱۴۰۰ - اسفند ۱۴۰۲</p>
+            <p class="mb-4" data-lang-fa="در این سمت، مسئولیت طراحی، توسعه و نگهداری سیستم‌های بک‌اند و فرانت‌اند برای چندین پروژه کلیدی را بر عهده داشتم. از تکنولوژی‌های React، Node.js و MongoDB استفاده کردم. همچنین در رهبری تیم‌های کوچک و mentoring توسعه‌دهندگان junior نقش داشتم." data-lang-en="In this role, I was responsible for designing, developing, and maintaining both backend and frontend systems for several key projects. I utilized technologies such as React, Node.js, and MongoDB. I also played a role in leading small teams and mentoring junior developers.">در این سمت، مسئولیت طراحی، توسعه و نگهداری سیستم‌های بک‌اند و فرانت‌اند برای چندین پروژه کلیدی را بر عهده داشتم. از تکنولوژی‌های React، Node.js و MongoDB استفاده کردم. همچنین در رهبری تیم‌های کوچک و mentoring توسعه‌دهندگان junior نقش داشتم.</p>
+            <ul class="list-disc list-inside text-left">
+                <li data-lang-fa="طراحی و پیاده‌سازی APIهای RESTful با Node.js و Express." data-lang-en="Designed and implemented RESTful APIs using Node.js and Express.">طراحی و پیاده‌سازی APIهای RESTful با Node.js و Express.</li>
+                <li data-lang-fa="توسعه رابط کاربری واکنش‌گرا با React و Redux." data-lang-en="Developed responsive user interfaces with React and Redux.">توسعه رابط کاربری واکنش‌گرا با React و Redux.</li>
+                <li data-lang-fa="بهینه‌سازی عملکرد وب‌سایت و کاهش زمان بارگذاری صفحه تا ۳۰٪." data-lang-en="Optimized website performance, reducing page load times by 30%.">بهینه‌سازی عملکرد وب‌سایت و کاهش زمان بارگذاری صفحه تا ۳۰٪.</li>
+            </ul>
+        </div>
+        <!-- Add more modal content for other sections (experience, education, projects) -->
+        <div id="experience-2-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="توسعه دهنده فرانت‌اند در شرکت ب" data-lang-en="Frontend Developer at Company B">توسعه دهنده فرانت‌اند در شرکت ب</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۸ - اسفند ۱۳۹۹" data-lang-en="October 2019 - March 2021">مهر ۱۳۹۸ - اسفند ۱۳۹۹</p>
+            <p class="mb-4" data-lang-fa="در این نقش، مسئولیت توسعه و نگهداری رابط کاربری وب‌سایت‌های شرکت را بر عهده داشتم. با استفاده از Vue.js و Nuxt.js، تجربه‌های کاربری جذاب و بهینه‌ای را ایجاد کردم." data-lang-en="In this role, I was responsible for developing and maintaining the user interfaces of the company's websites. Using Vue.js and Nuxt.js, I created engaging and optimized user experiences.">در این نقش، مسئولیت توسعه و نگهداری رابط کاربری وب‌سایت‌های شرکت را بر عهده داشتم. با استفاده از Vue.js و Nuxt.js، تجربه‌های کاربری جذاب و بهینه‌ای را ایجاد کردم.</p>
+            <ul class="list-disc list-inside text-left">
+                <li data-lang-fa="پیاده‌سازی کامپوننت‌های UI با Vue.js و Tailwind CSS." data-lang-en="Implemented UI components with Vue.js and Tailwind CSS.">پیاده‌سازی کامپوننت‌های UI با Vue.js و Tailwind CSS.</li>
+                <li data-lang-fa="همکاری نزدیک با تیم UX/UI برای بهبود طراحی و تجربه کاربری." data-lang-en="Collaborated closely with the UX/UI team to improve design and user experience.">همکاری نزدیک با تیم UX/UI برای بهبود طراحی و تجربه کاربری.</li>
+            </ul>
+        </div>
+        <div id="education-1-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="کارشناسی مهندسی کامپیوتر در دانشگاه تهران" data-lang-en="B.Sc. Computer Engineering at University of Tehran">کارشناسی مهندسی کامپیوتر در دانشگاه تهران</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۴ - تیر ۱۳۹۸" data-lang-en="October 2015 - July 2019">مهر ۱۳۹۴ - تیر ۱۳۹۸</p>
+            <p class="mb-4" data-lang-fa="در طول دوره کارشناسی، بر روی مباحث پیشرفته هوش مصنوعی، یادگیری ماشین و شبکه‌های کامپیوتری تمرکز داشتم. پروژه پایانی من در زمینه پردازش تصویر با استفاده از شبکه‌های عصبی بود." data-lang-en="During my undergraduate studies, I focused on advanced topics in Artificial Intelligence, Machine Learning, and Computer Networks. My final project involved image processing using neural networks.">در طول دوره کارشناسی، بر روی مباحث پیشرفته هوش مصنوعی، یادگیری ماشین و شبکه‌های کامپیوتری تمرکز داشتم. پروژه پایانی من در زمینه پردازش تصویر با استفاده از شبکه‌های عصبی بود.</p>
+            <ul class="list-disc list-inside text-left">
+                <li data-lang-fa="معدل کل: ۱۸.۵۰" data-lang-en="GPA: 3.8/4.0">معدل کل: ۱۸.۵۰</li>
+                <li data-lang-fa="عضو فعال انجمن علمی دانشکده." data-lang-en="Active member of the faculty's scientific association.">عضو فعال انجمن علمی دانشکده.</li>
+            </ul>
+        </div>
+        <div id="education-2-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="دیپلم ریاضی فیزیک در دبیرستان علامه حلی" data-lang-en="High School Diploma (Math-Physics) at Allame Helli High School">دیپلم ریاضی فیزیک در دبیرستان علامه حلی</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="مهر ۱۳۹۰ - خرداد ۱۳۹۴" data-lang-en="October 2011 - June 2015">مهر ۱۳۹۰ - خرداد ۱۳۹۴</p>
+            <p class="mb-4" data-lang-fa="در این دوره، با تمرکز بر دروس ریاضی و فیزیک، پایه علمی قوی برای ورود به دانشگاه را کسب کردم. در المپیادهای ریاضی و فیزیک منطقه نیز شرکت فعال داشتم." data-lang-en="During this period, with a focus on mathematics and physics, I gained a strong scientific foundation for university admission. I also actively participated in regional math and physics Olympiads.">در این دوره، با تمرکز بر دروس ریاضی و فیزیک، پایه علمی قوی برای ورود به دانشگاه را کسب کردم. در المپیادهای ریاضی و فیزیک منطقه نیز شرکت فعال داشتم.</p>
+            <ul class="list-disc list-inside text-left">
+                <li data-lang-fa="معدل دیپلم: ۱۹.۸۰" data-lang-en="Diploma GPA: 19.80">معدل دیپلم: ۱۹.۸۰</li>
+                <li data-lang-fa="کسب رتبه اول در مسابقات رباتیک مدرسه‌ای." data-lang-en="Achieved first place in school robotics competitions.">کسب رتبه اول در مسابقات رباتیک مدرسه‌ای.</li>
+            </ul>
+        </div>
+        <div id="education-3-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="دوره هوش مصنوعی در Coursera" data-lang-en="AI Course on Coursera">دوره هوش مصنوعی در Coursera</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="تابستان ۱۴۰۱" data-lang-en="Summer 2022">تابستان ۱۴۰۱</p>
+            <p class="mb-4" data-lang-fa="این دوره جامع، مبانی هوش مصنوعی، یادگیری ماشین و یادگیری عمیق را پوشش می‌داد. پروژه‌های عملی متعددی در زمینه پردازش زبان طبیعی و بینایی کامپیوتر انجام دادم." data-lang-en="This comprehensive course covered the fundamentals of Artificial Intelligence, Machine Learning, and Deep Learning. I completed several practical projects in Natural Language Processing and Computer Vision.">این دوره جامع، مبانی هوش مصنوعی، یادگیری ماشین و یادگیری عمیق را پوشش می‌داد. پروژه‌های عملی متعددی در زمینه پردازش زبان طبیعی و بینایی کامپیوتر انجام دادم.</p>
+            <ul class="list-disc list-inside text-left">
+                <li data-lang-fa="مدرس: Andrew Ng" data-lang-en="Instructor: Andrew Ng">مدرس: Andrew Ng</li>
+                <li data-lang-fa="پروژه نهایی: تشخیص اشیا با YOLO." data-lang-en="Final Project: Object detection with YOLO.">پروژه نهایی: تشخیص اشیا با YOLO.</li>
+            </ul>
+        </div>
+        <div id="project-1-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="سیستم مدیریت محتوا (CMS)" data-lang-en="Content Management System (CMS)">سیستم مدیریت محتوا (CMS)</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="کارفرما: شرکت X | تاریخ: بهار ۱۴۰۲" data-lang-en="Client: Company X | Date: Spring 2023">کارفرما: شرکت X | تاریخ: بهار ۱۴۰۲</p>
+            <p class="mb-4" data-lang-fa="این پروژه شامل طراحی و پیاده‌سازی یک سیستم مدیریت محتوای سفارشی برای یک شرکت بزرگ بود. هدف اصلی، فراهم کردن ابزاری قدرتمند و در عین حال ساده برای مدیران وب‌سایت جهت به‌روزرسانی و مدیریت محتوا بدون نیاز به دانش فنی بود. از React برای فرانت‌اند و Node.js با PostgreSQL برای بک‌اند استفاده شد." data-lang-en="This project involved the design and implementation of a custom Content Management System for a large company. The main goal was to provide a powerful yet simple tool for website administrators to update and manage content without requiring technical knowledge. React was used for the frontend, and Node.js with PostgreSQL for the backend.">این پروژه شامل طراحی و پیاده‌سازی یک سیستم مدیریت محتوای سفارشی برای یک شرکت بزرگ بود. هدف اصلی، فراهم کردن ابزاری قدرتمند و در عین حال ساده برای مدیران وب‌سایت جهت به‌روزرسانی و مدیریت محتوا بدون نیاز به دانش فنی بود. از React برای فرانت‌اند و Node.js با PostgreSQL برای بک‌اند استفاده شد.</p>
+            <a href="https://github.com/yourusername/project1" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه در گیت‌هاب" data-lang-en="View Project on GitHub">مشاهده پروژه در گیت‌هاب</a>
+        </div>
+        <div id="project-2-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="اپلیکیشن موبایل رزرو خدمات" data-lang-en="Service Booking Mobile Application">اپلیکیشن موبایل رزرو خدمات</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="کارفرما: استارتاپ Y | تاریخ: تابستان ۱۴۰۱" data-lang-en="Client: Startup Y | Date: Summer 2022">کارفرما: استارتاپ Y | تاریخ: تابستان ۱۴۰۱</p>
+            <p class="mb-4" data-lang-fa="توسعه یک اپلیکیشن موبایل برای رزرو انواع خدمات (مانند آرایشگاه، پزشک، تعمیرات) با استفاده از React Native. این اپلیکیشن شامل قابلیت‌های احراز هویت، جستجو، فیلتر، پرداخت آنلاین و سیستم امتیازدهی بود." data-lang-en="Developed a mobile application for booking various services (e.g., barbershop, doctor, repairs) using React Native. This application included features such as authentication, search, filter, online payment, and a rating system.">توسعه یک اپلیکیشن موبایل برای رزرو انواع خدمات (مانند آرایشگاه، پزشک، تعمیرات) با استفاده از React Native. این اپلیکیشن شامل قابلیت‌های احراز هویت، جستجو، فیلتر، پرداخت آنلاین و سیستم امتیازدهی بود.</p>
+            <a href="https://github.com/yourusername/project2" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه در گیت‌هاب" data-lang-en="View Project on GitHub">مشاهده پروژه در گیت‌هاب</a>
+        </div>
+        <div id="project-3-modal" class="modal-content glassmorphism p-1 rounded-2xl shadow-lg max-w-2xl w-full relative scale-in hidden">
+            <button class="absolute top-1 right-4 text-2xl hover-bw" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold mb-4" data-lang-fa="وب‌سایت فروشگاهی" data-lang-en="E-commerce Website">وب‌سایت فروشگاهی</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4" data-lang-fa="کارفرما: فروشگاه Z | تاریخ: پاییز ۱۴۰۰" data-lang-en="Client: Store Z | Date: Fall 2021">کارفرما: فروشگاه Z | تاریخ: پاییز ۱۴۰۰</p>
+            <p class="mb-4" data-lang-fa="طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe برای یک فروشگاه آنلاین. این پروژه شامل مدیریت محصولات، سبد خرید، فرآیند پرداخت امن و پنل مدیریت سفارشات بود." data-lang-en="Designed and implemented an e-commerce website with Next.js and Stripe for an online store. This project included product management, shopping cart, secure payment processing, and an order management panel.">طراحی و پیاده‌سازی یک وب‌سایت فروشگاهی با Next.js و Stripe برای یک فروشگاه آنلاین. این پروژه شامل مدیریت محصولات، سبد خرید، فرآیند پرداخت امن و پنل مدیریت سفارشات بود.</p>
+            <a href="https://github.com/yourusername/project3" target="_blank" class="text-black dark:text-white text-sm mt-0 block hover-bw" data-lang-fa="مشاهده پروژه در گیت‌هاب" data-lang-en="View Project on GitHub">مشاهده پروژه در گیت‌هاب</a>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-[95] hidden fade-in">
+        <div class="relative scale-in">
+            <button class="absolute top-1 right-4 text-white text-3xl hover-bw" onclick="closeImageModal()"><i class="fas fa-times"></i></button>
+            <img id="modal-image" src="" alt="Enlarged Image" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl">
+        </div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const welcomePopup = document.getElementById('welcome-popup');
+        const enterBtn = document.getElementById('enter-btn');
+        const langFaBtn = document.getElementById('lang-fa-btn');
+        const langEnBtn = document.getElementById('lang-en-btn');
+        const themeLightBtn = document.getElementById('theme-light-btn');
+        const themeDarkBtn = document.getElementById('theme-dark-btn');
+        const headerLangSwitch = document.getElementById('header-lang-switch');
+        const headerThemeSwitch = document.getElementById('header-theme-switch');
+        const headerName = document.getElementById('header-name');
+        const modalContainer = document.getElementById('modal-container');
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+
+        let currentLang = localStorage.getItem('lang') || 'fa';
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+
+
+        // افکت دنبال کننده موس
+        const cursorContainer = document.getElementById('cursor-effect');
+        const circles = [];
+        const circleCount = 3;
+
+        // ایجاد دایره‌ها
+        for (let i = 0; i < circleCount; i++) {
+            const circle = document.getElementById(`circle${i+1}`);
+            circles.push(circle);
+            // اندازه و تاخیرهای مختلف برای هر دایره
+            const size = 20 + i * 10; // دایره اول کوچکترین، بعدی‌ها بزرگتر
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.transition = `all 0.${i+0.1}s linear`; // تاخیر مختلف
+        }
+
+        let mouseX = 0, mouseY = 0;
+
+        // به روز رسانی موقعیت موس
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // انیمیشن دایره‌ها
+        function animateCircles() {
+            let x = mouseX;
+            let y = mouseY;
+            
+            circles.forEach((circle, index) => {
+                // محاسبه موقعیت با تاخیر
+                const circleX = parseFloat(circle.style.left || 0);
+                const circleY = parseFloat(circle.style.top || 0);
+                
+                const dx = x - circleX;
+                const dy = y - circleY;
+                
+                // حرکت نرم
+                circle.style.left = (circleX + dx * 0.1) + 'px';
+                circle.style.top = (circleY + dy * 0.1) + 'px';
+                
+                // کاهش اندازه هنگام حرکت سریع
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                const scale = Math.min(1, 100 / distance);
+                circle.style.transform = `scale(${0.5 + scale * 0.5})`;
+                
+                // به روز رسانی برای دایره بعدی با فاصله
+                x = circleX + dx * 0.2;
+                y = circleY + dy * 0.2;
+            });
+            
+            requestAnimationFrame(animateCircles);
+        }
+
+        // شروع انیمیشن
+        animateCircles();
+
+        // پنهان کردن دایره‌ها وقتی موس خارج از صفحه است
+        document.addEventListener('mouseleave', () => {
+            circles.forEach(circle => circle.style.opacity = '0');
+        });
+
+        document.addEventListener('mouseenter', () => {
+            circles.forEach(circle => circle.style.opacity = '1');
+        });
+
+
+
+
+        // Function to apply language
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            body.classList.remove('lang-fa', 'lang-en');
+            body.classList.add(`lang-${lang}`);
+            body.dir = lang === 'fa' ? 'rtl' : 'ltr';
+
+            document.querySelectorAll('[data-lang-fa]').forEach(element => {
+                if (lang === 'fa') {
+                    element.textContent = element.getAttribute('data-lang-fa');
+                } else {
+                    element.textContent = element.getAttribute('data-lang-en');
+                }
+            });
+
+            // Update header name
+            headerName.textContent = headerName.getAttribute(`data-lang-${lang}`);
+
+            // Update header language switch icon
+            headerLangSwitch.innerHTML = lang === 'fa' ? '<i class="fas fa-globe"></i> EN' : '<i class="fas fa-globe"></i> فا';
+
+            // Update welcome popup buttons
+            langFaBtn.classList.toggle('active-bw', lang === 'fa');
+            langEnBtn.classList.toggle('active-bw', lang === 'en');
+        }
+
+        // Function to apply theme
+        function applyTheme(theme) {
+            currentTheme = theme;
+            localStorage.setItem('theme', theme);
+            body.classList.remove('light', 'dark');
+            body.classList.add(theme);
+
+            // Update header theme switch icon
+            headerThemeSwitch.innerHTML = theme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+
+            // Update welcome popup buttons
+            themeLightBtn.classList.toggle('active-bw', theme === 'light');
+            themeDarkBtn.classList.toggle('active-bw', theme === 'dark');
+        }
+
+        // Initial application of language and theme
+        applyLanguage(currentLang);
+        applyTheme(currentTheme);
+
+        // Welcome Pop-up Logic
+        window.onload = () => {
+            const hasVisited = localStorage.getItem('hasVisited');
+            if (!hasVisited) {
+                welcomePopup.classList.remove('hidden');
+            } else {
+                welcomePopup.classList.add('hidden');
+                // Ensure animations run on subsequent visits
+                document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+                    el.style.opacity = 1;
+                    el.style.transform = 'none';
+                });
+            }
+        };
+
+        langFaBtn.addEventListener('click', () => applyLanguage('fa'));
+        langEnBtn.addEventListener('click', () => applyLanguage('en'));
+        themeLightBtn.addEventListener('click', () => applyTheme('light'));
+        themeDarkBtn.addEventListener('click', () => applyTheme('dark'));
+
+        enterBtn.addEventListener('click', () => {
+            welcomePopup.classList.add('hidden');
+            localStorage.setItem('hasVisited', 'true');
+            // Trigger animations after popup closes
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+                el.style.opacity = 1;
+                el.style.transform = 'none';
+            });
+        });
+
+        // Header Language Switch
+        headerLangSwitch.addEventListener('click', () => {
+            applyLanguage(currentLang === 'fa' ? 'en' : 'fa');
+        });
+
+        // Header Theme Switch
+        headerThemeSwitch.addEventListener('click', () => {
+            applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        // Modal Logic
+        function openModal(modalId) {
+            modalContainer.classList.remove('hidden');
+            document.getElementById(modalId).classList.remove('hidden');
+            body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        function closeModal() {
+            modalContainer.classList.add('hidden');
+            document.querySelectorAll('.modal-content').forEach(modal => modal.classList.add('hidden'));
+            body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Image Modal Logic
+        function openImageModal(imageUrl) {
+            modalImage.src = imageUrl;
+            imageModal.classList.remove('hidden');
+            body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            imageModal.classList.add('hidden');
+            modalImage.src = '';
+            body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        modalContainer.addEventListener('click', (e) => {
+            if (e.target === modalContainer) {
+                closeModal();
+            }
+        });
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeImageModal();
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('#navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active navigation item on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        function activateNavItem() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100; // Adjust for header height
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active-bw');
+                if (item.getAttribute('data-section') === current) {
+                    item.classList.add('active-bw');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', activateNavItem);
+        window.addEventListener('load', activateNavItem); // Activate on load
+
+        // Animate elements on scroll
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'none';
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+        animateOnScrollElements.forEach(el => {
+            el.style.opacity = 0; // Hide initially
+            el.style.animationPlayState = 'paused'; // Pause animation initially
+            observer.observe(el);
+        });
+
+        // Ensure numbers are Persian in RTL context
+        function convertNumbersToPersian(text) {
+            const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+            return text.replace(/[0-9]/g, (d) => persianNumbers[parseInt(d)]);
+        }
+
+        function applyPersianNumbers() {
+            if (currentLang === 'fa') {
+                document.querySelectorAll('body *:not(script):not(style)').forEach(el => {
+                    if (el.children.length === 0 && el.textContent.match(/[0-9]/)) {
+                        el.textContent = convertNumbersToPersian(el.textContent);
+                    }
+                });
+            }
+        }
+
+        // Run after language change
+        const originalApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            originalApplyLanguage(lang);
+            if (lang === 'fa') {
+                setTimeout(applyPersianNumbers, 100); // Apply after DOM update
+            }
+        };
+
+        // Initial call for numbers
+        if (currentLang === 'fa') {
+            setTimeout(applyPersianNumbers, 500); // Initial apply after page load
+        }
+
+    </script>
+</body>
+</html>
